@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'net-http', '~> 0.4.0'
 gem 'bootstrap', '~> 5.3.2'
 gem 'jquery-rails'
+gem 'devise', '~> 4.9', '>= 4.9.3'
 
 
 # Use Active Storage variant
