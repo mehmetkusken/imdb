@@ -25,6 +25,8 @@ gem 'net-http', '~> 0.4.0'
 gem 'bootstrap', '~> 5.3.2'
 gem 'jquery-rails'
 gem 'devise', '~> 4.9', '>= 4.9.3'
+gem 'rest-client'
+gem 'json'
 
 
 # Use Active Storage variant
