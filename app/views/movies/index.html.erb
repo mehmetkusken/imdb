@@ -7,7 +7,7 @@
   <div class="info_section">
     <div class="movie_header">
       <img class="locandina" src= <%= movie.poster %> />
-      <h1><%= movie.title %> </h1>
+      <h1><%= link_to movie.title , movie %> </h1>
       <h4>IMDB: <%= movie.rating %> </h4>
       <span class="minutes"><%= movie.year %> </span>
       <p class="type"><%= movie.genre %></p>
