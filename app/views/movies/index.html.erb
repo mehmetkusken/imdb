@@ -1,32 +1,27 @@
 
-<body class= "body1">
 <% @movies.each do |movie| %>
 
-<div class="container">
-<div class="row px-xl-5 px lg-0">
-<div class="col-md-4">
-<div class="main">
-<div class="movie-img">
-<img src=<%= movie.poster%> class="backimg"/>
-<img class="movie-cover" src=<%= movie.poster%>>
-<i class="fa fa-play"></i>
-</div>
-<h6><%= movie.title%></h6>
-<div class="head1 text-center">
-<p class="p2">Year</p>
-<p class="p2">IMDB</p>
-<p class="p2">Genre</p>
 
+ 
+  <div class="movie_card" id="ave">
+  <div class="info_section">
+    <div class="movie_header">
+      <img class="locandina" src= <%= movie.poster %> />
+      <h1><%= movie.title %> </h1>
+      <h4>IMDB: <%= movie.rating %> </h4>
+      <span class="minutes"><%= movie.year %> </span>
+      <p class="type"><%= movie.genre %></p>
+    </div>
+    <div class="movie_desc">
+      <p class="text">
+      <%= movie.plot %> 
+      </p>
+    </div>
+   
+  </div>
+  <div><img src= <%= movie.poster %> class="blur_back"/></div>
+  
 </div>
-<div class="head2 text-center">
-<p><%= movie.year%></p>
-<p><%= movie.rating%></p>
-<p><%= movie.genre%></p>
-
-</div>
-</div>
-</div>
-</div>
-
+  
+  
 <% end %>
-</body>
