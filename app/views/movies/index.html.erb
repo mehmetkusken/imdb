@@ -3,25 +3,15 @@
 
 
  
-  <div class="movie_card" id="ave">
-  <div class="info_section">
-    <div class="movie_header">
-      <img class="locandina" src= <%= movie.poster %> />
-      <h1><%= link_to movie.title , movie %> </h1>
-      <h4>IMDB: <%= movie.rating %> </h4>
-      <span class="minutes"><%= movie.year %> </span>
-      <p class="type"><%= movie.genre %></p>
-    </div>
-    <div class="movie_desc">
-      <p class="text">
-      <%= movie.plot %> 
-      </p>
-    </div>
-   
-  </div>
-  <div><img src= <%= movie.poster %> class="blur_back"/></div>
+  <div class="movie-card">
+  <p><%= link_to movie.title , movie %></p>
+  <img src=<%= movie.poster %> class="image-src">
+  <p>Year : <%= movie.year %></p>
+  <p>Genre : <%= movie.genre %></p>
+  <p>Rating : <%= movie.rating %></p>
+  <p>Description : <%= movie.plot %></p>
   
-</div>
+  </div>
   
   
 <% end %>

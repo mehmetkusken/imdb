@@ -1,4 +1,9 @@
+<div class="show-card">
 <p id="notice"><%= notice %></p>
+<p>
+  <img src= <%= @series.image %> />
+  
+</p>
 
 <p>
   <strong>Title:</strong>
@@ -8,11 +13,6 @@
 <p>
   <strong>Description:</strong>
   <%= @series.description %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @series.image %>
 </p>
 
 <p>
@@ -30,5 +30,9 @@
   <%= @series.year %>
 </p>
 
-<%= link_to 'Edit', edit_series_path(@series) %> |
+<%= link_to 'Add Your Favorite', edit_series_path(@series) %> |
 <%= link_to 'Back', series_index_path %>
+
+</br></br></br></br></br>
+
+<div>
