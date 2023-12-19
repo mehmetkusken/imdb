@@ -3,7 +3,8 @@ class MoviesController < ApplicationController
 
   # GET /movies or /movies.json
   def index
-    @movies = Movie.all
+    @params = params.permit(:search).to_h
+    @movies = Movie.filter_by_params(@params)
   end
 
   # GET /movies/1 or /movies/1.json

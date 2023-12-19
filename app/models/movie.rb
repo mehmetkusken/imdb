@@ -1,5 +1,11 @@
 class Movie < ApplicationRecord
 
+    scope :search, -> (title){where("title Like ?", "%#{title}%")}
+    scope :filter_by_params, ->(params){
+    search(params[:search])
+  }
+
+
     def self.film
         
         require 'uri'
