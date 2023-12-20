@@ -3,7 +3,8 @@ class SeriesController < ApplicationController
 
   # GET /series or /series.json
   def index
-    @series = Series.all
+    @params = params.permit(:search).to_h
+    @series = Series.filter_by_params(@params)
   end
 
   # GET /series/1 or /series/1.json
