@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :favorite_items
   resources :series
   resources :movies
   devise_for :users

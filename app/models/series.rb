@@ -1,4 +1,6 @@
 class Series < ApplicationRecord
+    has_many :favorite_items, dependent: :destroy
+    has_many :favorited_by, through: :favorite_items, source: :user
 
     scope :search, -> (title){where("title Like ?", "%#{title}%")}
     scope :filter_by_params, ->(params){
