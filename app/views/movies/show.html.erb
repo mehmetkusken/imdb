@@ -1,4 +1,6 @@
 <div class="center">
+
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -33,13 +35,12 @@
 </p>
 
 
-
-<%= link_to 'Add Your Favorite list', edit_movie_path(@movie) %> |
+<%= button_to "Add your favorite ", movie_favorite_items_path(@movie.id) , method: :post , params: {id: @movie.id}%>
 <%= link_to 'Back', movies_path %>
 
 </br></br></br>
 
-
+  
 
 </div>
 

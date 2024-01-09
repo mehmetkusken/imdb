@@ -30,7 +30,7 @@
   <%= @series.year %>
 </p>
 
-<%= link_to 'Add Your Favorite', edit_series_path(@series) %> |
+<%= link_to 'Add Your Favorite', favorite_items_path , method: :post , params: {id: @series.id} %> |
 <%= link_to 'Back', series_index_path %>
 
 </br></br></br></br></br>
