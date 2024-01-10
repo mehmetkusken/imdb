@@ -9,8 +9,9 @@ class MoviesController < ApplicationController
 
   # GET /movies/1 or /movies/1.json
   def show
+    @favorites = FavoriteItem.all
     @favorite = FavoriteItem.find_or_initialize_by(user: current_user, movie: @movie)
-    end
+  end
 
   # GET /movies/new
   def new

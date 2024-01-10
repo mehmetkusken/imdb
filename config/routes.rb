@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   resources :series
-  resources :movies do
-    resources :favorite_items
-  end
+  resources :movies
+  resources :favorite_items
   devise_for :users
   devise_scope :user do  
     get '/users/sign_out' => 'devise/sessions#destroy'     
