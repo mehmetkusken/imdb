@@ -7,9 +7,11 @@ class MoviesController < ApplicationController
     @movies = Movie.filter_by_params(@params)
   end
 
+ 
+
   # GET /movies/1 or /movies/1.json
   def show
-    @favorites = FavoriteItem.all
+    @favorites = current_user.favorite_items
     @favorite = FavoriteItem.find_or_initialize_by(user: current_user, movie: @movie)
   end
 

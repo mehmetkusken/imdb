@@ -1,1 +1,45 @@
-<h1>Added your favorite list</h1>
+<div class="center">
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <img src= <%= @favorite.movie.poster %> />
+  
+</p>
+<p>
+  <strong>Title:</strong>
+  <%= @favorite.movie.title %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @favorite.movie.year %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @favorite.movie.genre %>
+</p>
+
+
+<p>
+  <strong>Plot:</strong>
+  <%= @favorite.movie.plot %>
+</p>
+
+
+<p>
+  <strong>IMDB:</strong>
+  <%= @favorite.movie.rating %>
+</p>
+
+<%= button_to "Delete from your favorite list ", favorite_item_path(favorite_item: @favorite), method: :delete , params: {id: @favorite.movie.id}%>
+<%= link_to 'Back', favorite_items_path  %>
+
+</br></br></br>
+
+  
+
+</div>
+
