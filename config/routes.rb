@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :favorites
   resources :series
   resources :movies
   resources :favorite_items
