@@ -9,7 +9,7 @@ class SeriesController < ApplicationController
 
   # GET /series/1 or /series/1.json
   def show
-    @series = Series.find(params[:id])
+    @favorite = Favorite.find_or_initialize_by(user: current_user, series: @series)
   end
 
   # GET /series/new

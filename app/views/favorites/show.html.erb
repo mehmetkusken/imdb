@@ -1,0 +1,38 @@
+<div class="show-card">
+<p id="notice"><%= notice %></p>
+<p>
+  <img src= <%= @favorite.series.image %> />
+  
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @favorite.series.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @favorite.series.description %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @favorite.series.genre %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @favorite.series.rating %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @favorite.series.year %>
+</p>
+
+<%= button_to "Delete from your favorite list ", favorite_path(favorite: @favorite), method: :delete , params: {id: @favorite.series.id}%>
+<%= link_to 'Back', favorites_path %>
+
+</br></br></br></br></br>
+
+<div>

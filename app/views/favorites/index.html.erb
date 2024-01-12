@@ -1,0 +1,23 @@
+
+
+
+
+<h1>Favorite Series List</h1>
+
+
+    <% @favorites.each do |serie| %>
+      <div class="product">
+      <p><%= link_to serie.series.title , serie %></p>
+      <img src=<%= serie.series.image %> class="image-src">
+      <p>Year : <%= serie.series.year %></p>
+      <p>Genre : <%= serie.series.genre %></p>
+      <p>Rating : <%= serie.series.rating %></p>
+      <p>Description : <%= serie.series.description %></p>
+      
+      </div>
+     
+    <% end %>
+  
+
+
+

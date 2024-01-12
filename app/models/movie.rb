@@ -1,6 +1,6 @@
 class Movie < ApplicationRecord
     has_many :favorite_items
-    has_many :movies, through: :favorite_items, source: :user 
+    has_many :users, through: :favorite_items, source: :user 
 
     scope :search, -> (title){where("title Like ?", "%#{title}%")}
     scope :filter_by_params, ->(params){
